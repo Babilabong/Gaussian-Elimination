@@ -91,6 +91,21 @@ if __name__ == '__main__':
           [1,0,4,6],
           [1,1,0,-3]]
 
+    """
+    check_det = []
+
+    for i in range(len(A_b)):
+        row = []
+        for j in range(len(A_b)):
+            row.append(A_b[i][j])
+        check_det.append(row)
+
+    i = np.linalg.det(check_det)
+    if i < 0.00001 and i > -0.00001:
+        print("cant inverse the matrix, det = 0")
+     """ 
+    
+
     result = gaussianElimination(A_b)
     if isinstance(result, str):
         print(result)
